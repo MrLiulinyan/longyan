@@ -1,0 +1,66 @@
+.entrance-content{
+	background-image: url(../img/entrance_bg.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	width: 100%;
+	height: calc(100vh - 224px);
+}
+
+
+.entrance-container{
+	width: 100%;
+	height: 100%;
+}
+
+.entrance-left,.entrance-right{
+	width: 50%;
+}
+
+.entrance-left-btn,.entrance-right-btn{
+	color: #fff;
+	margin-bottom: -61px;
+}
+
+.entrance-left-btn .btn-icon,.entrance-right-btn .btn-icon{
+	width: 102px;
+	height: 103px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	margin: 0 auto;
+}
+
+.entrance-left-btn .btn-icon{
+	background-image: url(../img/entrance_icon_understanding.png);
+}
+
+.entrance-right-btn .btn-icon{
+	background-image: url(../img/entrance_icon_live.png);
+}
+
+
+.btn-name-cn{
+	font-size: 33px;
+	font-family: Source Han Serif CN;
+	font-weight: 600;
+	color: #FFFFFF;
+	margin-top: 33px;
+}
+
+.btn-name-en{
+	font-size: 14px;
+	font-family: Source Han Serif CN;
+	font-weight: 600;
+	color: #FFFFFF;
+	margin-top: 23px;
+}
+
+.company-name{
+	font-size: 25px;
+	font-family: Source Han Serif CN;
+	font-weight: 800;
+	color: #767676;
+	padding-bottom: 33px;
+}
+

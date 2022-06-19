@@ -1,0 +1,253 @@
+a {
+	text-decoration: none;
+}
+
+body{
+	background-color: #f7f4eb;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: #c7c7c7;
+	box-shadow: 0 0 10px inset rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background: #fff;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-row-reverse {
+	flex-direction: row-reverse;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-start {
+	justify-content: flex-start;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+.flex-center {
+	justify-content: center;
+}
+
+.flex-shrink {
+	flex-shrink: 0;
+}
+
+.flex-between {
+	justify-content: space-between;
+}
+
+.flex-around {
+	justify-content: space-around;
+}
+
+.flex-align-center {
+	align-items: center;
+}
+
+.flex-align-end {
+	align-items: flex-end;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.text-center {
+	text-align: center;
+}
+
+
+.header {
+	width: 100%;
+}
+
+
+.footer {
+	width: 100%;
+	height: 224px;
+	background-image: url(../img/footer_bg.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	color: #FFFFFF;
+}
+
+.footer-container {
+	height: 100%;
+}
+
+.footer-logo {
+	background-image: url(../img/loago.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	width: 124px;
+	height: 54px;
+	margin-top: 70px;
+}
+
+.footer-contact {
+	padding-top: 60px;
+	margin-left: 68px;
+}
+
+.footer-company-name {
+	font-size: 17px;
+	margin-top: 8px;
+}
+
+.footer-address {
+	font-size: 14px;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 30px;
+	margin-left: 45px;
+}
+
+.footer-copyright {
+	margin-top: 50px;
+	font-size: 14px;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 18px;
+}
+
+.footer-qrcode {
+	width: 145px;
+	height: 100%;
+	background: #5A5A5A;
+	padding-top: 38px;
+	box-sizing: border-box;
+	margin-left: 163px;
+}
+
+.footer-qrcode img {
+	display: block;
+	width: 110px;
+	height: 110px;
+	margin: 0 auto;
+}
+
+.qrcode-name {
+	font-size: 15px;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 20px;
+	margin-top: 13px;
+}
+
+.header {
+	
+	background-color: #666;
+}
+
+.header-icon{
+	width: 100%;
+	height: 89px;
+	background-image: url(../img/header-icon.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+}
+
+.header-container {
+	width: 100%;
+}
+
+.header-logo {
+	width: 117px;
+	height: 52px;
+	background-image: url(../img/loago.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 100%;
+	margin-right: 129px;
+}
+
+
+.menu .menu-item+.menu-item{
+	margin-left: 38px;
+}
+
+.menu .menu-item a {
+	color: #FFFFFF;
+	font-family: yixinlingxiaoti;
+	padding: 7px 7px 7px 3px;
+}
+
+.menu .menu-item a.active{
+	background-image: url('../img/menu-icon.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+}
+
+.menu .menu-title-cn {
+	height: 46px;
+	font-size: 23px;
+	font-weight: 400;
+	line-height: 25px;
+	writing-mode: tb-rl;
+}
+
+.menu .menu-title-en {
+	width: 32px;
+	height: 44px;
+	font-size: 17px;
+	font-family: yixinlingxiaoti;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 15px;
+	writing-mode: tb;
+	margin-top: 9px;
+}
+
+.header-btn{
+	background-image: url(../img/menu_btn.png) ;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	width: 71px;
+	height: 71px;
+	border-radius: 15px;
+	color: #fff;
+	font-size: 18px;
+	font-family: Source Han Serif CN;
+	font-weight: 600;
+	line-height: 20px;
+	margin-left: 167px;
+}
+
+
+.text-container{
+	max-width: 1200px;
+	width: 100%;
+	margin:  0 auto;
+}
