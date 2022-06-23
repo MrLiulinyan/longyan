@@ -102,9 +102,28 @@
         <div class="module-title-en">Cemetery display</div>
         <div class="module-title-cn">陵园 展示</div>
       </div>
-	  <div class="cemetery-content">
-		 <div class="cemetery-swiper"></div>
-	  </div>
+      <div class="cemetery-content">
+        <div class="cemetery-wrap">
+          <div class="swiper-container cemetery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-no-swiping">
+                <img src="./img/about_img_1.png" />
+              </div>
+              <div class="swiper-slide swiper-no-swiping">
+                <img src="./img/about_img_1.png" />
+              </div>
+              <div class="swiper-slide swiper-no-swiping">
+                <img src="./img/about_img_1.png" />
+              </div>
+              <div class="swiper-slide swiper-no-swiping">
+                <img src="./img/about_img_1.png" />
+              </div>
+            </div>
+          </div>
+          <div class="cemetery-button-prev"></div>
+          <div class="cemetery-button-next"></div>
+        </div>
+      </div>
     </div>
     <!-- 陵园视频 -->
     <div class="video-container">
@@ -118,10 +137,10 @@
             <source src="./video/video.mp4" type="video/mp4" />
             您的浏览器不支持 video。
           </video>
-		  <div class="video-wrap"></div>
+          <div class="video-wrap"></div>
           <!-- 播放按钮 -->
           <div class="video-btn"></div>
-		  <!-- 工具 -->
+          <!-- 工具 -->
           <div class="video-controls">
             <!-- 进度条 -->
             <div class="video-bar"></div>
@@ -303,8 +322,8 @@
         </div>
       </div>
     </div>
-	<!-- 回到顶部 -->
-	<div class="scroll-top-btn text-center">TOP</div>
+    <!-- 回到顶部 -->
+    <div class="scroll-top-btn text-center">TOP</div>
   </body>
   <script type="text/javascript" src="js/jquery-2.1.0.js"></script>
   <script type="text/javascript" src="js/swiper-4.3.5.min.js"></script>
@@ -323,9 +342,28 @@
         })(i);
       }
     };
-
-    var productSwiper = new Swiper(".product-swiper", {
+    // 陵园展示swiper
+    var cemeterySwiper = new Swiper(".cemetery-swiper", {
       loop: true,
+      autoplay: false,
+      slidesPerView: 1.5,
+      centeredSlides: true,
+      // spaceBetween: -750,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 10,
+        depth: 60,
+        modifier: 2,
+        slideShadows: true,
+      },
+      navigation: {
+        nextEl: ".cemetery-button-next",
+        prevEl: ".cemetery-button-prev",
+      },
+    });
+    // 福地展示swiper
+    var productSwiper = new Swiper(".product-swiper", {
+      loop: false,
       autoplay: false,
       navigation: {
         nextEl: ".product-button-next",

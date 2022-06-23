@@ -102,6 +102,56 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: auto 560px;
+  padding-top: 108px;
+}
+
+.cemetery-wrap {
+  width: 1351px;
+  height: 532px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 51px;
+  box-sizing: border-box;
+}
+.cemetery-wrap .swiper-slide {
+  background-image: url(../img/cemetery_swiper.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 90px 45px 21px 45px;
+  box-sizing: border-box;
+  transform: scale(0.95);
+  transition: 300ms;
+}
+.cemetery-wrap .swiper-slide-active,
+.cemetery-wrap .swiper-slide-duplicate-active {
+  transform: scale(1);
+}
+.cemetery-wrap .swiper-slide-active{
+  z-index: 999 !important;
+}
+.cemetery-wrap .swiper-slide img {
+  width: 100%;
+  height: 422px;
+  display: block;
+}
+
+.cemetery-button-next,
+.cemetery-button-prev {
+  width: 51px;
+  height: 134px;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  margin-top: -67px;
+  background-color: #000;
+  cursor: pointer;
+}
+.cemetery-button-prev {
+  left: 0;
+}
+.cemetery-button-next {
+  right: 0;
 }
 
 .video-content {
@@ -425,10 +475,10 @@
   cursor: pointer;
 }
 
-.anchorBL{
-	display: none !important;
+.anchorBL {
+  display: none !important;
 }
 
-.BMap_cpyCtrl{
-	display: none !important;
+.BMap_cpyCtrl {
+  display: none !important;
 }
