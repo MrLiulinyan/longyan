@@ -97,7 +97,7 @@
 
 .cemetery-content {
   width: 100%;
-  min-height: 860px;
+  margin-bottom: 300px;
   background-image: url(../img/cemetery_bg.png);
   background-repeat: no-repeat;
   background-position: top center;
@@ -113,27 +113,30 @@
   padding: 0 51px;
   box-sizing: border-box;
 }
-.cemetery-wrap .swiper-slide {
-  background-image: url(../img/cemetery_swiper.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  padding: 90px 45px 21px 45px;
-  box-sizing: border-box;
-  transform: scale(0.95);
-  transition: 300ms;
+
+.cemetery-swiper,.cemetery-swiper ul {
+	width: 940px;
+	height: 600px;
+	margin: 0 auto;
 }
-.cemetery-wrap .swiper-slide-active,
-.cemetery-wrap .swiper-slide-duplicate-active {
-  transform: scale(1);
+
+
+.cemetery-wrap ul li {
+  position: relative;
+  overflow: hidden;
 }
-.cemetery-wrap .swiper-slide-active{
-  z-index: 999 !important;
-}
-.cemetery-wrap .swiper-slide img {
+
+.cemetery-wrap ul li img.cemetery-swiper-bg {
   width: 100%;
-  height: 422px;
   display: block;
+}
+
+.cemetery-wrap img.cemetery-swiper-img{
+	position: absolute;
+	width: calc(100% - 10%);
+	height: calc(100% - 20.5%);
+	top: 16.5%;
+	left: 4.5%;
 }
 
 .cemetery-button-next,
@@ -152,6 +155,11 @@
 }
 .cemetery-button-next {
   right: 0;
+}
+
+.cemetery-button-next::after,
+.cemetery-button-prev::after{
+	content: '';
 }
 
 .video-content {
@@ -473,6 +481,7 @@
   color: #ffffff;
   line-height: 34px;
   cursor: pointer;
+  z-index: 9999;
 }
 
 .anchorBL {
