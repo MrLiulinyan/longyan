@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>龙岩陵园</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/video-js.min.css" />
+  </head>
+
+  <body>
+    <div class="video-box">
+      <video
+        id="video_1"
+        class="video-js vjs-default-skin vjs-big-play-centered"
+        data-setup="{}"
+        controls
+      >
+        <source src="./video/video.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <script src="./js/video.min.js"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        var videoBox = document.getElementById("video_1");
+        const wrap = document.createElement("DIV");
+        wrap.className = "video-wrap";
+        videoBox.appendChild(wrap);
+        var myPlayer = videojs("video_1");
+        myPlayer.on('play',function(){
+            wrap.style.display = 'none'
+        })
+      };
+    </script>
+    <style>
+      .video-box {
+        width: 500px;
+        height: 300px;
+      }
+      #video_1 {
+        width: 100% !important;
+        height: 100% !important;
+      }
+      .video-js .vjs-big-play-button {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #fff;
+        color: #000;
+        border: none;
+        z-index: 10;
+      }
+      .video-js .vjs-big-play-button:focus,
+      .video-js:hover .vjs-big-play-button {
+        background-color: #fff;
+        color: #000;
+        border: none;
+      }
+      .video-wrap {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+    </style>
+  </body>
+</html>
