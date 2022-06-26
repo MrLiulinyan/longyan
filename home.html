@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/home.css" />
 		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/video-js.min.css" />
 	</head>
 	<body>
 		<!-- header -->
@@ -17,46 +18,74 @@
 				<div class="header-logo"></div>
 				<div class="menu flex-row">
 					<div class="menu-item flex-column flex-align-center">
-						<a class="text-center menu-title-cn active" href="#"> 陵园 首页 </a>
+						<a class="text-center menu-title-cn" href="home.html"> 陵园 首页 </a>
 						<div class="menu-title-en">front page</div>
 					</div>
 					<div class="menu-item flex-column flex-align-center">
-						<a class="text-center menu-title-cn" href="#"> 关于 龙岩 </a>
+						<a class="text-center menu-title-cn" href="about.html"> 关于 龙岩 </a>
 						<div class="menu-title-en">about longyan</div>
 					</div>
 					<div class="menu-item flex-column flex-align-center">
-						<a class="text-center menu-title-cn" href="#"> 视频 中心 </a>
+						<a class="text-center menu-title-cn" href="video.html"> 视频 中心 </a>
 						<div class="menu-title-en">Video Center</div>
 					</div>
 					<div class="menu-item flex-column flex-align-center">
-						<a class="text-center menu-title-cn" href="#"> 园区 导览 </a>
+						<a class="text-center menu-title-cn" href="park.html"> 园区 导览 </a>
 						<div class="menu-title-en">Park tour</div>
 					</div>
 					<div class="menu-item flex-column flex-align-center">
-						<a class="text-center menu-title-cn" href="#"> 福地 展示 </a>
+						<a class="text-center menu-title-cn" href="product.html"> 福地 展示 </a>
 						<div class="menu-title-en">Product display</div>
 					</div>
 					<div class="menu-item flex-column flex-align-center">
-						<a class="text-center menu-title-cn" href="#"> 新闻 资讯 </a>
+						<a class="text-center menu-title-cn" href="news.html"> 新闻 资讯 </a>
 						<div class="menu-title-en">news</div>
 					</div>
 					<div class="menu-item flex-column flex-align-center">
-						<a class="text-center menu-title-cn" href="#"> 联系 方式 </a>
+						<a class="text-center menu-title-cn" href="contact.html"> 联系 方式 </a>
 						<div class="menu-title-en">contact details</div>
 					</div>
 				</div>
-				<a class="header-btn flex-row flex-align-center flex-center" href="#">区域<br />了解</a>
+				<a class="header-btn flex-row flex-align-center flex-center" href="agency.html">区域<br />了解</a>
 			</div>
 		</div>
 		<!-- banner -->
-		<div class=""></div>
+		<div class="banner">
+			<div class="swiper-container banner-swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide swiper-no-swiping" style="background-image: url(img/header-bg.png);">
+						<div class="banner-text flex-column flex-center flex-align-center">
+							<img src="img/banner.png" />
+							<div class="banner-title-cn">祭奠/旅游/观光/休闲为一体</div>
+							<div  class="banner-title-en">Funeral/tourism/sightseeing/leisure as one</div>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-no-swiping" style="background-image: url(img/header-bg.png);">
+						<div class="banner-text flex-column flex-center flex-align-center">
+							<img src="img/banner.png" />
+							<div class="banner-title-cn">祭奠/旅游/观光/休闲为一体</div>
+							<div  class="banner-title-en">Funeral/tourism/sightseeing/leisure as one</div>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-no-swiping" style="background-image: url(img/header-bg.png);">
+						<div class="banner-text flex-column flex-center flex-align-center">
+							<img src="img/banner.png" />
+							<div class="banner-title-cn">祭奠/旅游/观光/休闲为一体</div>
+							<div  class="banner-title-en">Funeral/tourism/sightseeing/leisure as one</div>
+						</div>
+					</div>
+				</div>
+				<!-- 分页器 -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
 		<!-- 关于龙岩 -->
 		<div class="about-container">
 			<div class="module-title flex-row flex-center">
 				<div class="module-title-en">Cemetery scene</div>
 				<div class="module-title-cn">龙岩 简介</div>
 			</div>
-			<div class="text-container flex-row flex-between">
+			<div class="common-container flex-row flex-between">
 				<div class="about-left">
 					<div class="about-title">惠州龙岩艺术陵园开发有限公司</div>
 					<div class="about-text">
@@ -80,6 +109,7 @@
 					<img class="about-img2" src="./img/about_img_2.png" alt="" srcset="" />
 				</div>
 			</div>
+			<div class="about-bg"></div>
 		</div>
 		<!-- 陵园展示 -->
 		<div class="cemetery-container">
@@ -99,8 +129,8 @@
 									class="cemetery-swiper-img" src="img/about_img_1.png" /></li>
 						</ul>
 					</div>
-					<div class="cemetery-button-prev"></div>
-					<div class="cemetery-button-next"></div>
+					<div class="cemetery-button-prev button-prev"></div>
+					<div class="cemetery-button-next button-next"></div>
 				</div>
 			</div>
 		</div>
@@ -112,18 +142,10 @@
 			</div>
 			<div class="video-content">
 				<div class="video-box">
-					<video poster="./img/about_img_1.png">
+					<video id="cemeteryVideo" class="video-js vjs-default-skin vjs-big-play-centered" data-setup="{}" controls>
 						<source src="./video/video.mp4" type="video/mp4" />
 						您的浏览器不支持 video。
 					</video>
-					<div class="video-wrap"></div>
-					<!-- 播放按钮 -->
-					<div class="video-btn"></div>
-					<!-- 工具 -->
-					<div class="video-controls">
-						<!-- 进度条 -->
-						<div class="video-bar"></div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -171,7 +193,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="more-btn text-center"><a href="#">查看更多</a></div>
+			<div class="more-btn text-center"><a href="park.html">查看更多</a></div>
 		</div>
 		<!-- 福地展示 -->
 		<div class="product-container">
@@ -182,7 +204,7 @@
 			<div class="product-wrap">
 				<div class="product-description">· 诚信 · 积极 · 永续 · 创新</div>
 				<div class="product-icon"></div>
-				<div class="product-content text-container">
+				<div class="product-content common-container">
 					<div class="product-tabs flex-row" id="productTabs">
 						<div class="tab-item text-center active">树葬系列</div>
 						<div class="tab-item text-center">塔葬系列</div>
@@ -196,21 +218,33 @@
 						<div class="swiper-container product-swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide swiper-no-swiping">
+									<div class="flex-row flex-between product-row">
+										<div class="product-name">龙珠宝座</div>
+										<div class="product-price">￥ 1900000</div>
+									</div>
 									<img src="#" />
 								</div>
 								<div class="swiper-slide swiper-no-swiping">
+									<div class="flex-row flex-between product-row">
+										<div class="product-name">龙珠宝座2</div>
+										<div class="product-price">￥ 1900000</div>
+									</div>
 									<img src="#" />
 								</div>
 								<div class="swiper-slide swiper-no-swiping">
+									<div class="flex-row flex-between product-row">
+										<div class="product-name">龙珠宝座3</div>
+										<div class="product-price">￥ 1900000</div>
+									</div>
 									<img src="#" />
 								</div>
 							</div>
 						</div>
-						<div class="product-button-prev"></div>
-						<div class="product-button-next"></div>
+						<div class="product-button-prev button-prev"></div>
+						<div class="product-button-next button-next"></div>
 						<div class="product-pagination flex-row flex-center"></div>
 					</div>
-					<div class="more-btn text-center"><a href="#">查看更多</a></div>
+					<div class="more-btn text-center"><a href="product.html">查看更多</a></div>
 				</div>
 			</div>
 		</div>
@@ -220,7 +254,7 @@
 				<div class="module-title-en">News</div>
 				<div class="module-title-cn">新闻 资讯</div>
 			</div>
-			<div class="news-list flex-row text-container">
+			<div class="news-list flex-row common-container">
 				<div class="news-item">
 					<a href="#">
 						<img class="news-img" src="" alt="" />
@@ -270,7 +304,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="more-btn text-center"><a href="#">查看更多</a></div>
+			<div class="more-btn text-center"><a href="news.html">查看更多</a></div>
 		</div>
 		<!-- map -->
 		<div class="map">
@@ -308,8 +342,26 @@
 	<script type="text/javascript" src="js/swiper-4.3.5.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/jquery.roundabout.min.js"></script>
+	<script src="./js/video.min.js"></script>
 	<script type="text/javascript">
 		window.onload = function() {
+			// header
+			/*当前页面导航高亮*/
+			var href = window.location.href.split('/')[window.location.href.split('/').length - 1].substr(0, 4);
+			if (href.length > 0) {
+				$(function() {
+					$(".menu .menu-item a[href^='" + href + "']").first().addClass("active");
+				});
+			}
+			// banner
+			var banner = new Swiper('.banner-swiper', {
+				loop: true,
+				autoplay: false,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			})
 			// 
 			var tabs = $("#productTabs .tab-item");
 			// var tabBox = $('.case-tab-box')
@@ -345,6 +397,17 @@
 					bulletClass: "product-bullet",
 				},
 			});
+			// 视频
+			setTimeout(function(){
+				var videoBox = document.getElementById("cemeteryVideo");
+				const wrap = document.createElement("DIV");
+				wrap.className = "video-wrap";
+				videoBox.appendChild(wrap);
+				var myPlayer = videojs("cemeteryVideo");
+				myPlayer.on('play', function() {
+					wrap.style.display = 'none'
+				})
+			},200)
 			// 返回顶部
 			var scrollTopBtn = $('#scrollBtn')[0];
 			// 获取滚动位置
@@ -376,22 +439,54 @@
 			// 点击返回
 			let timerId = null;
 			scrollTopBtn.onclick = function() {
-					clearInterval(timerId);
-					timerId = setInterval(function() {
-						let begin = getPageScroll().y; //当前位置
-						let target = 0; //目标位置
-						let step = (target - begin) * 0.3;
-						begin += step;
-						if (Math.abs(Math.floor(step)) <= 1) {
-							clearInterval(timerId);
-							window.scrollTo(0, 0);
-							return;
-						}
-						window.scrollTo(0, begin);
-					}, 50)
-				};
+				clearInterval(timerId);
+				timerId = setInterval(function() {
+					let begin = getPageScroll().y; //当前位置
+					let target = 0; //目标位置
+					let step = (target - begin) * 0.3;
+					begin += step;
+					if (Math.abs(Math.floor(step)) <= 1) {
+						clearInterval(timerId);
+						window.scrollTo(0, 0);
+						return;
+					}
+					window.scrollTo(0, begin);
+				}, 50)
+			};
 		};
 	</script>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZH0o8QGiYOnX8in5OZPLyVst"></script>
 	<script type="text/javascript" src="./js/map.js"></script>
+	<style type="text/css">
+		.video-box{
+			width: 100%;
+			height: auto;
+		}
+		.video-js .vjs-big-play-button {
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			background-color: #fff;
+			color: #000;
+			border: none;
+			z-index: 10;
+		}
+		
+		.video-js .vjs-big-play-button:focus,
+		.video-js:hover .vjs-big-play-button {
+			background-color: #fff;
+			color: #000;
+			border: none;
+		}
+		.video-wrap {
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+	</style>
 </html>

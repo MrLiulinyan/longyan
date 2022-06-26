@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>龙岩陵园-视频详情</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/newsDetail.css" />
+		<link rel="stylesheet" href="css/videoDetail.css" />
+		<link rel="stylesheet" href="css/video-js.min.css" />
+	</head>
+	<body>
+		<!-- header -->
+		<div class="header inside-header">
+			<div class="header-container flex-row flex-center">
+				<div class="header-logo"></div>
+				<div class="menu flex-row">
+					<div class="menu-item flex-column flex-align-center">
+						<a class="text-center menu-title-cn active" href="#"> 陵园 首页 </a>
+						<div class="menu-title-en">front page</div>
+					</div>
+					<div class="menu-item flex-column flex-align-center">
+						<a class="text-center menu-title-cn" href="#"> 关于 龙岩 </a>
+						<div class="menu-title-en">about longyan</div>
+					</div>
+					<div class="menu-item flex-column flex-align-center">
+						<a class="text-center menu-title-cn" href="#"> 视频 中心 </a>
+						<div class="menu-title-en">Video Center</div>
+					</div>
+					<div class="menu-item flex-column flex-align-center">
+						<a class="text-center menu-title-cn" href="#"> 园区 导览 </a>
+						<div class="menu-title-en">Park tour</div>
+					</div>
+					<div class="menu-item flex-column flex-align-center">
+						<a class="text-center menu-title-cn" href="#"> 福地 展示 </a>
+						<div class="menu-title-en">Product display</div>
+					</div>
+					<div class="menu-item flex-column flex-align-center">
+						<a class="text-center menu-title-cn" href="#"> 新闻 资讯 </a>
+						<div class="menu-title-en">news</div>
+					</div>
+					<div class="menu-item flex-column flex-align-center">
+						<a class="text-center menu-title-cn" href="#"> 联系 方式 </a>
+						<div class="menu-title-en">contact details</div>
+					</div>
+				</div>
+				<a class="header-btn flex-row flex-align-center flex-center" href="#">区域<br />了解</a>
+			</div>
+		</div>
+		<!-- crumbs -->
+		<div class="crumbs">
+			<ul class="navigation common-container flex-row">
+				<li><a href="home.html">返回首页</a></li>
+				<li><a href="news.html">视频中心</a></li>
+				<li><a href="#" class="active">视频详情</a></li>
+			</ul>
+		</div>
+		<!--inside content -->
+		<div class="inside-content">
+			<div class="common-container">
+				<div class="news-content">
+					<div class="video-box" style="width: 1200px;height: 589px;">
+						<video id="cemeteryVideo" class="video-js vjs-default-skin vjs-big-play-centered"
+							data-setup="{}" controls>
+							<source src="./video/video.mp4" type="video/mp4" />
+							您的浏览器不支持 video。
+						</video>
+					</div>
+				</div>
+				<div class="news-footer flex-row flex-between">
+					<div class="news-prev">上一篇：无</div>
+					<div class="news-next">下一篇：中国殡葬紫钻品牌龙岩艺术陵园开发有限公...</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-container flex-row flex-center">
+				<div class="footer-logo"></div>
+				<div class="footer-contact">
+					<div class="flex-row">
+						<div class="footer-company-name font-bold">
+							惠州龙岩艺术陵园开发有限公司​
+						</div>
+						<div class="footer-address">
+							地 址：广东省惠州市惠阳沙田镇长安大道12号 <br />
+							电 话：0752-3753037 传 真：0752-3753965
+						</div>
+					</div>
+					<div class="footer-copyright">
+						Copyright © 惠州市龙岩艺术陵园开发有限公司 All Rights Reserved .
+						粤ICP备05144496号
+					</div>
+				</div>
+				<div class="footer-qrcode text-center">
+					<img src="img/qrcode.png" />
+					<div class="qrcode-name">移动官网二维码</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<style type="text/css">
+		
+		.inside-content {
+			padding-top: 75px;
+		}
+	
+		.video-js .vjs-big-play-button {
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			background-color: #fff;
+			color: #000;
+			border: none;
+			z-index: 10;
+		}
+	
+		.video-js .vjs-big-play-button:focus,
+		.video-js:hover .vjs-big-play-button {
+			background-color: #fff;
+			color: #000;
+			border: none;
+		}
+	
+
+	</style>
+	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	<script src="./js/video.min.js"></script>
+	<script type="text/javascript">
+		setTimeout(function() {
+			// 视频
+			var videoBox = document.getElementById("cemeteryVideo");
+			const wrap = document.createElement("DIV");
+			wrap.className = "video-wrap";
+			videoBox.appendChild(wrap);
+			var myPlayer = videojs("cemeteryVideo");
+			myPlayer.on('play', function() {
+				wrap.style.display = 'none'
+			})
+		}, 200)
+	</script>
+</html>

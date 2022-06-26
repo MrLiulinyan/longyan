@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>龙岩陵园-代理</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/agency.css" />
+	</head>
+	<body>
+		<!-- header -->
+		<div class="header inside-header">
+			<div class="header-container flex-row flex-center">
+				<div class="header-logo"></div>
+				<div class="menu flex-row" style="width: 648px;"></div>
+				<a class="header-btn flex-row flex-align-center flex-center" href="home.html">陵园<br />实况</a>
+			</div>
+		</div>
+		<!--inside content -->
+		<div class="inside-content">
+			<div class="common-container">
+				<div class="about-title flex-row flex-center">
+					<div class="about-title-cn">代理简介</div>
+					<div class="about-title-en">Agency Profile</div>
+				</div>
+				<div class="about-name">
+					这个代理简介大标题
+				</div>
+				<p class="about-introduce">
+					惠州龙岩艺术陵园开发有限公司，以改革殡葬文化、革新殡葬礼仪服务为己任，以诚信、积极、永续、创新为企业信条，公司在这样的信念下建立，并将在殡葬事业道路上坚定地走下去。</p>
+				<p class="about-introduce">
+					惠州龙岩艺术陵园开发有限公司位于地处惠阳沙田镇长安大道风景林地，四周有几千亩梨树园及绵延不断，距市区五公里，交通便利，地理位置优越，系人生归属之风水宝地。<br />
+					现有老红军、革命烈士、老干部、港澳、台同胞等安息于此。<br />
+					每逢清明期间，墓区里散发着桃花、梨花等果花的芳香，安慰着祭拜的亲人，抚慰着安息的亡灵。<br />
+					现设计为祭奠、旅游、观光、休闲为一体的生态式陵园。
+				</p>
+				<div class="agency-title">我要成为代理</div>
+				<form>
+					<div class="agency-top inside-container flex-row">
+                        <div class="area-item">
+							<div class="area-name">省</div>
+							<select name="province" id="province"></select>
+						</div>
+                        <div class="area-item">
+							<div class="area-name" >市</div>
+							<select name="city" id="city"></select>
+						</div>
+                        <div class="area-item">
+							<div class="area-name">区</div>
+							<select name="district" id="district"></select>
+						</div>
+                        <div class="area-item">
+							<div class="area-name">街道</div>
+							<select name="street" id="street"></select>
+						</div>
+					</div>
+					<div class="agency-bottom inside-container">
+						<div class="flex-row form-row">
+							<div class="form-item">
+								<div class="form-label required">姓名</div>
+								<input type="text" placeholder="请输入姓名" name="userName" class="form-input">
+							</div>
+							<div class="form-item">
+								<div class="form-label required">手机</div>
+								<input type="text" placeholder="请输入手机" name="phone" class="form-input">
+							</div>
+						</div>
+						<div class="flex-row form-row">
+							<div class="form-item">
+								<div class="form-label">邮箱</div>
+								<input type="text" placeholder="请输入邮箱" name="email" class="form-input">
+							</div>
+							<div class="form-item"></div>
+						</div>
+						<div class="form-row">
+							<div class="form-item" style="width: 398px;min-width: 398px;">
+								<div class="form-label required">验证码</div>
+								<input type="text" placeholder="请输入验证码" name="code" class="form-input">
+							</div>
+						</div>
+					</div>
+					<input type="submit" value="提交" class="submit-btn text-center">
+				</form>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="footer">
+			<div class="footer-container flex-row flex-center">
+				<div class="footer-logo"></div>
+				<div class="footer-contact">
+					<div class="flex-row">
+						<div class="footer-company-name font-bold">
+							惠州龙岩艺术陵园开发有限公司​
+						</div>
+						<div class="footer-address">
+							地 址：广东省惠州市惠阳沙田镇长安大道12号 <br />
+							电 话：0752-3753037 传 真：0752-3753965
+						</div>
+					</div>
+					<div class="footer-copyright">
+						Copyright © 惠州市龙岩艺术陵园开发有限公司 All Rights Reserved .
+						粤ICP备05144496号
+					</div>
+				</div>
+				<div class="footer-qrcode text-center">
+					<img src="img/qrcode.png" />
+					<div class="qrcode-name">移动官网二维码</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/area.js"></script>
+	<script type="text/javascript">
+		var province = document.getElementById('province'); // 省份
+		var city = document.getElementById('city'); // 市区
+		var district = document.getElementById('district'); // 区
+		var street = document.getElementById('street'); // 街道
+		var provinces = Object.keys(area); // 创建变量接收
+		// 遍历省份
+		provinces.forEach(item => {
+			var option = document.createElement('option'); // 创建optiin接收省份
+			option.innerText = item; // 将省份内容放到option
+			province.appendChild(option); // 将省份放到子节点上输出出去
+		});
+		// province 省级下拉框发生变化 调用下级
+		province.onchange = function() {
+			getCity(this.value)
+		}
+		getCity('广东省'); // 初始化
+		// city 市级
+		function getCity(province) {
+			city.innerHTML = ''
+			var citys = Object.keys(area[province][0]); // 获取value值和下标为0
+			citys.forEach(item => {
+				var option = document.createElement('option')
+				option.innerText = item;
+				city.appendChild(option)
+			})
+			getDistrict()
+		}
+
+		//   市级发生变化
+		city.onchange = getDistrict; // 市级发生变化调用区级
+		//   区级发生变化 调用街道
+		district.onchange = function() {
+			getStreet()
+		}
+		// district 区
+		function getDistrict() {
+			district.innerHTML = ''
+			var districts = area[province.value][0][city.value]
+			districts.forEach(item => {
+				var dis = Object.keys(item)[0]
+				var option = document.createElement('option');
+				option.innerText = dis;
+				district.appendChild(option)
+			});
+			getStreet()
+		}
+		// street  街道 需要切割字符串转为数组
+		function getStreet() {
+			street.innerHTML = ''
+			var streets = area[province.value][0][city.value][district.selectedIndex][district.value].split('、');
+			streets.forEach(item => {
+				var option = document.createElement('option');
+				option.innerText = item;
+				street.appendChild(option);
+			})
+		}
+	</script>
+</html>

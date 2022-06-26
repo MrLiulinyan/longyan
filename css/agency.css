@@ -1,0 +1,168 @@
+body{
+	background-image: url('../img/common_bg2.png');
+	background-repeat: no-repeat;
+	background-position: center 850px;
+	background-size: inherit;
+}
+
+.inside-header{
+	background-image: url('../img/agency_header.png') !important;
+}
+
+.inside-content{
+	padding-bottom: 287px;
+	padding-top: 35px;
+}
+
+.about-title{
+	color: #029541;
+	margin: 45px 0 77px 0;
+}
+
+.about-title::before{
+	content: '';
+	width: 62.4px;
+	height: 3px;
+	background-color: #029541;
+	display: block;
+	transform: rotate(-55deg) translateY(20px) translateX(-16px);
+}
+
+.about-title .about-title-cn{
+	font-size: 25px;
+	line-height: 28px;
+	width: 53px;
+	height: 53px;
+	writing-mode: tb-rl;
+	margin-left: 22px;
+}
+
+.about-title .about-title-en{
+	font-size: 18px;
+	line-height: 25px;
+	width: 86px;
+	margin-left: 13px;
+}
+
+.about-name{
+	font-size: 32px;
+	font-weight: 800;
+	color: #2B2B2B;
+	margin-bottom: 42px;
+}
+
+p.about-introduce{
+	font-size: 18px;
+	font-weight: 500;
+	color: #2B2B2B;
+	line-height: 40px;
+}
+
+p.about-introduce + p.about-introduce{
+	margin-top: 52px;
+}
+
+.agency-title{
+	font-size: 25px;
+	color: #000000;
+	margin-top: 100px;
+	margin-bottom: 33px;
+}
+
+.submit-btn{
+	width: 204px;
+	height: 51px;
+	color: #fff;
+	border: none;
+	margin: 47px auto 0 auto;
+	display: block;
+	background-image: url('../img/btn_bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.agency-top{
+	padding: 20px 38px;
+	height: 143px;
+	border-radius: 15px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.agency-top .area-item{
+	text-align: center;
+}
+.agency-top .area-item + .area-item{
+	margin-left: 27px;
+}
+.area-item select{
+	width: 261px;
+	height: 61px;
+	background: #F7F4EB;
+	border-radius: 8px;
+	border: none;
+	text-align: center;
+	/* appearance: none; */
+}
+
+
+.area-item select:focus-visible{
+	border: none;
+	outline: none;
+}
+.area-item .area-name{
+	font-size: 20px;
+	font-weight: 400;
+	color: #2B2B2B;
+	margin-bottom: 18px;
+}
+
+.agency-bottom{
+	margin-top: 25px;
+	padding: 30px;
+}
+
+ .form-input{
+	width: 100%;
+	height: 61px;
+	background: #F7F4EB;
+	border-radius: 8px;
+	border: none;
+	box-sizing: border-box;
+	padding: 20px 16px;
+}
+
+ .form-input:focus,
+.form-input:focus-visible{
+	border: none;
+	outline:none;
+}
+
+ .form-label{
+	margin-bottom: 18px;
+	font-size: 20px;
+	font-weight: 400;
+	color: #2B2B2B;
+}
+ .form-label.required::before{
+	content:'*' ;
+	color: #f00;
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.form-row{
+	margin-bottom: 39px;
+}
+.form-row:last-of-type{
+	margin-bottom: 0;
+}
+.form-item {
+		min-width: calc(50% - 31px);
+}
+.form-item + .form-item{
+	margin-left: 45px;
+	width: 100%;
+
+}
