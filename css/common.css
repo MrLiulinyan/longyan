@@ -166,9 +166,10 @@ body {
 
 
 .header-icon {
-	width: 100%;
+	width: 400px;
 	height: 89px;
-	background-image: url(../img/header-icon.png);
+	margin: 0 auto;
+	background-image: url(../img/header-icon2.png);
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: cover;
